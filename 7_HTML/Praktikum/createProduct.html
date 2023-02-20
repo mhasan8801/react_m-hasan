@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Produk</title>
+</head>
+<body>
+    <div class="header">
+        <h3>Simple Header</h3>
+        <a href="landingPage.html"><button>Landing Page</button></a>
+        <a href="createProduct.html"><button>Create Product</button></a>
+        <a href="about.html"><button>About Us</button></a>
+        <hr>
+    </div>
+
+    <div class="titlePage">
+        <h1>Create Product</h1>
+        <h2>Detail Product</h2>
+    </div>
+    
+    <form action="">
+        <div class="productName">
+            <label for="product-name">Product Name :</label><br>
+            <input type="text" id="product-name" minlength="6" maxlength="50" required>
+        </div>
+        <div class="productCategory">
+            <label for="product-category">Product Category :</label><br>
+            <select name="productCatgory" id="" required>
+                <option value="satu"></option>
+                <option value="dua">dua</option>
+                <option value="tiga">tiga</option>
+            </select> 
+        </div>
+        <div class="productFreshness">
+            <label for="">Product Freshness :</label><br>
+            <input type="radio" id="brandNew" name="productFreshness" required><label for="productF">Brand New</label><br>
+            <input type="radio" id="secondHank" name="productFreshness" required><label for="productF">Second Hank</label><br>
+            <input type="radio" id="refurbished" name="productFreshness" required><label for="productF">Refurbished</label><br>
+        </div>
+        <div class="producImage">
+            <label for="productI">Image of Product</label>
+            <input type="file" id="productI" required>
+        </div>
+        <div class="productDesc">
+            <label for="producDesc">Additional Description</label><br>
+            <textarea name="producDesc" id="" cols="35" rows="10" required></textarea>
+        </div>
+        <div class="producPrice">
+            <label for="producPrice">Product price :</label><br>
+            <input type="number" id="producPrice" placeholder="$ 100" width="30px" required>
+        </div>
+        <div class="btn-submit">
+            <button>Submit</button>
+        </div>
+    </form>
+
+    <div class="footer">
+        <hr>
+        <p>© Copyright <strong>Arsha.</strong> All Rights Reserved</p>
+        <p>Designed by BootstrapMade</p>
+    </div>
+
+</body>
+</html>
