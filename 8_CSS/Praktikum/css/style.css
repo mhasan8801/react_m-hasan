@@ -1,0 +1,194 @@
+ :root {
+     --primary: #37517E;
+     --bg: #47B2E4;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     border: none;
+     text-decoration: none;
+ }
+
+ body {
+     font-family: Jost;
+     color: #fff;
+ }
+
+ /* Header */
+ header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1.4rem 2%;
+ }
+
+ header .header-nav a {
+     padding: 0 0.5rem;
+ }
+
+ /* Body/Main/Hero */
+ main {
+     padding: 10rem 7% 5rem;
+     background-color: var(--primary);
+ }
+
+ main .row {
+     display: flex;
+ }
+
+ main .row .main-left {
+     flex: 1 1 35rem;
+     padding: 0 1rem;
+     margin: 5% 0;
+ }
+
+ main .row .main-left h3 {
+     font-size: 3rem;
+     margin-bottom: 0.8rem;
+     line-height: 1;
+ }
+
+ main .row .main-left p {
+     font-size: 1.5rem;
+     margin-bottom: 3rem;
+     font-weight: 100;
+     line-height: 1.3;
+     color: hsl(0, 0%, 60%);
+ }
+
+ main .row .main-left .btn-get {
+     font-size: 1rem;
+     font-weight: 500;
+     background: var(--bg);
+     color: #fff;
+     padding: 0.5rem 1rem;
+     border-radius: 50px;
+     line-height: 1.5rem;
+ }
+
+ main .row .main-left .btn-watch {
+     font-size: 1rem;
+     font-weight: 400;
+     line-height: 1rem;
+     color: #fff;
+     padding-left: 3rem;
+ }
+
+ main .row .main-right {
+     flex: 1 1 30rem;
+ }
+
+ main .row .main-right img {
+     width: 100%;
+     padding: 0 1rem;
+ }
+
+ /* Footer */
+ footer {}
+
+ footer .joinOur {
+     padding: 3rem 7%;
+     background-color: #F3F5FA;
+     text-align: center;
+ }
+
+ footer .joinOur h3 {
+     font-size: 1.5rem;
+     color: var(--primary);
+     margin-bottom: 1rem;
+
+ }
+
+ footer .joinOur p {
+     font-size: 1rem;
+     color: #444;
+     font-family: OpenSans;
+     margin-bottom: 1.8rem;
+ }
+
+ footer .joinOur .btn-join {
+     /* box-shadow: 1px 1px 0.4px rgba(0, 0, 0, 0.4); */
+ }
+
+ footer .joinOur .btn-white {
+     font-size: 1rem;
+     font-weight: 500;
+     background: #db4949;
+     color: #000000;
+     padding: 0.5rem 1rem;
+     border-radius: 50px;
+     line-height: 1.5rem;
+ }
+
+ footer .joinOur .btn-subscribe {
+     font-size: 1rem;
+     font-weight: 300;
+     background: var(--bg);
+     color: #fff;
+     padding: 0.5rem 1rem;
+     border-radius: 50px;
+     line-height: 1.5rem;
+ }
+
+ footer .arsha {
+     padding: 3rem 7%;
+ }
+
+ footer .arsha h3 {
+     font-size: 1.8rem;
+     color: var(--primary);
+ }
+
+ footer .copyright {
+     padding: 2.5rem 7%;
+     background-color: var(--primary);
+     display: flex;
+     justify-content: space-between;
+ }
+
+ footer .copyright .copy {
+     font-size: 1rem;
+     font-family: OpenSans;
+     line-height: 1.4;
+     font-weight: 400;
+ }
+
+ footer .copyright .design {
+     font-size: 1rem;
+     font-family: OpenSans;
+     line-height: 1.4;
+     font-weight: 400;
+ }
+
+ footer .copyright .design span {
+     color: var(--bg);
+ }
+
+ /* Media Query */
+ /* Laptop */
+ @media (max-width: 1366px) {
+     html {
+         font-size: 75%;
+     }
+ }
+
+ /* Tablet */
+ @media (max-width: 768px) {
+     html {
+         font-size: 62.5%;
+     }
+
+     main .row {
+         flex-wrap: wrap;
+     }
+ }
+
+ /* Handphone */
+ @media (max-width: 480px) {
+     html {
+         font-size: 55%;
+     }
+ }
