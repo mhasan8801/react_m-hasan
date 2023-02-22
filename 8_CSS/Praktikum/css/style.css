@@ -25,7 +25,12 @@
      padding: 1.4rem 2%;
  }
 
+ header .header-name {
+     font-size: 2rem;
+ }
+
  header .header-nav a {
+     font-size: 1.4rem;
      padding: 0 0.5rem;
  }
 
@@ -46,13 +51,13 @@
  }
 
  main .row .main-left h3 {
-     font-size: 3rem;
+     font-size: 3.5rem;
      margin-bottom: 0.8rem;
      line-height: 1;
  }
 
  main .row .main-left p {
-     font-size: 1.5rem;
+     font-size: 1.8rem;
      margin-bottom: 3rem;
      font-weight: 100;
      line-height: 1.3;
@@ -60,8 +65,8 @@
  }
 
  main .row .main-left .btn-get {
-     font-size: 1rem;
-     font-weight: 500;
+     font-size: 1.3rem;
+     font-weight: 400;
      background: var(--bg);
      color: #fff;
      padding: 0.5rem 1rem;
@@ -69,12 +74,28 @@
      line-height: 1.5rem;
  }
 
+ main .row .main-left .btn-get:hover {
+     background-color: #fff;
+     color: var(--primary);
+ }
+
  main .row .main-left .btn-watch {
-     font-size: 1rem;
+     font-size: 1.3rem;
      font-weight: 400;
      line-height: 1rem;
      color: #fff;
-     padding-left: 3rem;
+     margin-left: 3rem;
+     padding: 0.5rem 1rem;
+ }
+
+ main .row .main-left .btn-watch:hover {
+     font-size: 1.3rem;
+     font-weight: 400;
+     line-height: 1rem;
+     color: var(--primary);
+     background-color: #fff;
+     padding: 0.5rem 1rem;
+     border-radius: 50px;
  }
 
  main .row .main-right {
@@ -96,34 +117,41 @@
  }
 
  footer .joinOur h3 {
-     font-size: 1.5rem;
+     font-size: 2.2rem;
      color: var(--primary);
      margin-bottom: 1rem;
 
  }
 
  footer .joinOur p {
-     font-size: 1rem;
+     font-size: 1.2rem;
      color: #444;
      font-family: OpenSans;
      margin-bottom: 1.8rem;
  }
 
  footer .joinOur .btn-join {
-     /* box-shadow: 1px 1px 0.4px rgba(0, 0, 0, 0.4); */
+     text-align: center;
  }
 
- footer .joinOur .btn-white {
+ footer .joinOur .btn-join .input-join {
      font-size: 1rem;
      font-weight: 500;
-     background: #db4949;
-     color: #000000;
+     background: white;
      padding: 0.5rem 1rem;
      border-radius: 50px;
      line-height: 1.5rem;
+     border-radius: 50px;
+     min-width: 30rem;
+     transition-property: background;
+     transition-duration: 3s;
  }
 
- footer .joinOur .btn-subscribe {
+ footer .joinOur .btn-join .input-join:hover {
+     background: var(--bg);
+ }
+
+ footer .joinOur .btn-join .btn-subscribe {
      font-size: 1rem;
      font-weight: 300;
      background: var(--bg);
@@ -131,16 +159,74 @@
      padding: 0.5rem 1rem;
      border-radius: 50px;
      line-height: 1.5rem;
+     background-color: var(--bg);
  }
 
- footer .arsha {
-     padding: 3rem 7%;
+ footer .joinOur .btn-join .btn-subscribe:hover {
+     background-color: var(--primary);
  }
 
- footer .arsha h3 {
-     font-size: 1.8rem;
+ footer .footer4 {
+     display: flex;
+     justify-content: space-between;
+     padding: 4rem 7%;
+ }
+
+ footer .footer4 .footer-left1 h3 {
+     font-size: 2rem;
      color: var(--primary);
  }
+
+ footer .footer4 .footer-left1 p {
+     font-size: 1.2rem;
+     color: #5E5E5E;
+     margin-bottom: 3rem;
+ }
+
+ footer .footer4 .footer-left1 span {
+     font-size: 1.1rem;
+     color: #5E5E5E;
+     margin-bottom: 3rem;
+ }
+
+ footer .footer4 .footer-left2 h3,
+ footer .footer4 .footer-right1 h3,
+ footer .footer4 .footer-right2 h3 {
+     font-size: 1.2rem;
+     color: var(--primary);
+     margin-bottom: 1rem;
+ }
+
+ footer .footer4 .footer-left2 p,
+ footer .footer4 .footer-right1 p {
+     font-size: 1rem;
+     color: #777;
+     font-family: OpenSans;
+     margin-bottom: 1.5rem;
+     margin-left: 1.5rem;
+ }
+
+ footer .footer4 .footer-right2 p {
+     font-size: 1rem;
+     color: #444;
+     font-family: OpenSans;
+ }
+
+ footer .footer4 .footer-right2 .lingkaran {
+     width: 2rem;
+     height: 2rem;
+     background: var(--bg);
+     border-radius: 100%;
+     display: inline-block;
+     margin: 0.7rem 0.2rem;
+     transition-property: height;
+     transition-duration: 1s;
+ }
+
+ footer .footer4 .footer-right2 .lingkaran:hover {
+     height: 5rem;
+ }
+
 
  footer .copyright {
      padding: 2.5rem 7%;
@@ -182,6 +268,10 @@
      }
 
      main .row {
+         flex-wrap: wrap;
+     }
+
+     footer .footer4 {
          flex-wrap: wrap;
      }
  }
