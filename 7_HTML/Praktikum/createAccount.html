@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
 </head>
+
 <body>
 
     <div class="header">
@@ -17,29 +19,61 @@
         <hr>
     </div>
 
+    <div class="titlePage">
+        <h1>Create Account</h1>
+        <h2>Detail Form</h2>
+    </div>
+
     <form class="signup">
-        <table border="0">
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><label for="nama">Nama Lengkap :</label></td>
-                <td><input type="text" id="name"></td>
-            </tr>
-            <tr>
-                <td><label for="email">Email :</label></td>
-                <td><input type="email" id="email"></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password :</label></td>
-                <td><input type="password" id="password"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td> <button>Create Account</button></td>
-            </tr>
-        </table>
+        <form action="">
+            <div class="fistName">
+                <label for="first-name">First name :</label><br>
+                <input type="text" id="first-name" required>
+            </div>
+            <div class="lastName">
+                <label for="last-name">Last name :</label><br>
+                <input type="text" id="last-name" required>
+            </div>
+            <div class="userName">
+                <label for="user-name">Username :</label><br>
+                <input type="text" id="user-name" required>
+            </div>
+            <div class="email">
+                <label for="email">Email :</label><br>
+                <input type="email" id="email" required>
+            </div>
+            <div class="gender" typ>
+                <label for="">Product Freshness :</label><br>
+                <input type="radio" id="male" name="gender" required><label for="gender">Male</label><br>
+                <input type="radio" id="female" name="gender" required><label for="gender">Female</label><br>
+                <input type="radio" id="other" name="gender" required><label for="gender">Other</label><br>
+            </div>
+            <div class="addres">
+                <label for="address">Address :</label><br>
+                <input type="text" id="address" required>
+            </div>
+            <div class="address">
+                <label for="address2">Address 2 :</label><br>
+                <input type="text" id="address2" required>
+            </div>
+            <div class="nasional">
+                <label for="nasionality">Nasionality :</label><br>
+                <select name="nasionality" id="" required>
+                    <option value="id">Indonesia</option>
+                    <option value="usa">Amerika</option>
+                    <option value="eng">Inggirs</option>
+                </select>
+            </div>
+            <div class="lg" typ>
+                <label for="">Language Spoken :</label><br>
+                <input type="checkbox" id="id" name="lg" required><label for="lg">Bahasa Indonesia</label><br>
+                <input type="checkbox" id="eng" name="lg" required><label for="lg">English</label><br>
+                <input type="checkbox" id="etc" name="lg" required><label for="lg">Other</label><br>
+            </div>
+            <div class="btn-submit">
+                <button>Create Account</button>
+            </div>
+        </form>
     </form>
     <div class="footer">
         <hr>
@@ -47,4 +81,5 @@
         <p>Designed by BootstrapMade</p>
     </div>
 </body>
+
 </html>
