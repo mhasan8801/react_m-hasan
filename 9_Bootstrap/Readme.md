@@ -1,6 +1,7 @@
-# Summary Section 8 CSS
+# Summary Section 9 Bootsrap
 
-1. **CSS** atau __Cascading Style Sheets__ adalah salah satu teknologi yang digunakan untuk menghias tampilan halaman web. CSS digunakan untuk mengatur dan mengontrol tampilan dan layout halaman web, seperti mengatur warna, font, ukuran, tata letak, dan efek visual lainnya. Dengan menggunakan CSS,  kita dapat mengubah tampilan halaman web secara konsisten dan efisien tanpa harus memodifikasi konten yang ada.
-2. **3 cara menambahkan CSS ke dalam html** adalah secara **__internal CSS yaitu menambahkan style pada tag head, external css yaitu file terpisan yang  ditautkan ke file HTML menggunakan tag link, dan secara inline css yang ditambahkan ke dalam atribut style pada tag HTML tertentu.__**
-3. Contoh beberapa properti pada CSS : __font-family, color, background-color, width, height, margin, 
- padding, border, text-align, display__
+1. **Bootstrap** adalah sebuah framework CSS open source yang digunakan untuk membangun desain responsif dan modern pada website. Dimana berisi komponen-komponen seperti _grid system, navigasi, tombol, formulir, tabel,_ dan lain-lain yang dapat digunakan untuk membangun website secara cepat dan mudah.
+
+2. **Bootstrap** digunakan untuk menyederhanakan proses pembuatan website. Dengan menggunakan **Bootstrap**, kita dapat menghemat waktu dan _mengurangi biaya dalam membuat desain website_, karena tidak perlu membuat desain dari awal dan dapat memanfaatkan komponen-komponen yang telah disediakan.
+
+3. **Bootstrap** memiliki kelebihan dalam hal responsif, yakni dapat _menyesuaikan tampilan website dengan ukuran layar yang berbeda-beda_ pada perangkat desktop, tablet, dan smartphone. Selain itu, **Bootstrap** juga memiliki dokumentasi yang lengkap dan aktif dikembangkan oleh komunitas yang besar, sehingga memudahkan kita untuk mempelajari dan menggunakan framework ini.
