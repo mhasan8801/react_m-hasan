@@ -1,0 +1,7 @@
+# Summary Section 10 Javascript Refreshment
+
+1. **JavaScript** adalah sebuah bahasa pemrograman tingkat tinggi yang digunakan untuk membuat script pada website. Bahasa ini bersifat scripting, untyped, dan interpreted, yang berarti kode program tidak perlu dikompilasi terlebih dahulu sebelum dieksekusi oleh mesin. Selain itu, **JavaScript** juga sering digunakan untuk membuat interaksi antara pengguna dan website, seperti animasi, validasi form, dan lain-lain.
+
+2. Dalam **JavaScript** terdapat beberapa hal seperti method adalah fungsi yang terikat pada objek, yang memungkinkan objek tersebut untuk melakukan tindakan atau operasi tertentu, control flow adalah cara program menjalankan kode, yaitu dengan mengikuti urutan kode yang diberikan, dan function adalah blok kode yang dapat dipanggil untuk melakukan tindakan tertentu
+
+3. Sementara Async await adalah teknik pemrograman **JavaScript** yang digunakan untuk menangani kode asinkron secara mudah dan elegan, sedangkan untuk DOM (Document Object Model) adalah representasi struktur halaman web dalam bentuk objek yang dapat dimanipulasi melalui kode **JavaScript**. Dalam praktiknya, ini berarti pengembang web dapat menggunakan kode **JavaScript** untuk mengakses dan memanipulasi elemen HTML, CSS, dan konten lainnya pada halaman web secara dinamis. 
