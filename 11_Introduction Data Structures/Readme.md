@@ -1,0 +1,12 @@
+# Summary Section 11 Introduction Data Structures
+
+1. **Data structures** dalam javascript adalah cara untuk menyimpan dan mengorganisir data dalam komputer. Dalam JavaScript, terdapat beberapa tipe **data structures** yang dapat digunakan, seperti *arrays, objects, sets, dan maps*. Setiap tipe **data structures** memiliki karakteristik dan kegunaan yang berbeda-beda, sehingga pemilihan yang tepat sangat bergantung pada konteks dan kebutuhan dari pengembangan aplikasi.
+
+2. Salah satu kegunaan **data structures** di JavaScript adalah untuk membantu memproses data dengan lebih efisien dan efektif. Sebagai contoh, array dapat digunakan untuk menyimpan dan mengakses sejumlah besar data dengan cepat, sedangkan object dapat digunakan untuk menyimpan data dalam bentuk pasangan key-value yang mudah diakses. Setiap tipe **data structures** juga memiliki metode dan properti yang berbeda-beda untuk memanipulasi data yang disimpan.
+
+3. Memahami konsep **data structures** merupakan salah satu keterampilan penting. Dengan memahami karakteristik dan kegunaan dari setiap tipe **data structures**, kita dapat membuat kode yang lebih efisien, mudah dibaca, dan mudah maintenance. Selain itu, memahami konsep **data structures** juga dapat membantu kita memilih algoritma yang tepat untuk menyelesaikan masalah tertentu dan meningkatkan performa aplikasi secara keseluruhan.
+
+
+
+
+Regenerate response
