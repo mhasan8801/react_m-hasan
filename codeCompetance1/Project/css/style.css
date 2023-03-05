@@ -1,0 +1,238 @@
+ :root {
+     --primary: #37517E;
+     --bg: #47B2E4;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     border: none;
+     text-decoration: none;
+ }
+
+ body {
+     font-family: Jost;
+     color: #fff;
+ }
+
+ /* Navbar */
+ nav {
+     background-image: url("https://img.freepik.com/free-vector/gradient-mountain-landscape_23-2149162009.jpg?w=826&t=st=1677982645~exp=1677983245~hmac=07712b55d659fc1ecec38ec2f54f8ed82b0796b80c83caef466d49b5b2294f2a");
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ nav .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link {
+     margin-left: 1.5rem;
+ }
+
+ nav .container-fluid .navbar-brand {
+     font-size: 1.5rem;
+     font-weight: 700;
+     color: #212529;
+     font-family: Roboto, sans-serif;
+ }
+
+ nav .container-fluid .navbar-collapse .navbar-nav .nav-item .active {
+     font-size: 1rem;
+     color: white;
+     background-color: #0D6EFD;
+     border-radius: 4px;
+ }
+
+ nav .container-fluid ul li a {
+     font-size: 1rem;
+     color: #0D6EFD;
+     font-weight: 500;
+ }
+
+
+ /* Body/Main/Hero */
+ main {
+     padding: 10rem 7% 5rem;
+     background-image: url("https://img.freepik.com/free-vector/gradient-mountain-landscape_23-2149162009.jpg?w=826&t=st=1677982645~exp=1677983245~hmac=07712b55d659fc1ecec38ec2f54f8ed82b0796b80c83caef466d49b5b2294f2a");
+     background-repeat: no-repeat;
+     background-size: cover;
+     /* background-color: var(--primary); */
+ }
+
+ main .row {
+     display: flex;
+     justify-content: center;
+     text-align: center;
+ }
+
+ main .row img {
+     width: 30%;
+ }
+
+ main .row h3 {
+     font-size: 2.7rem;
+     color: wheat;
+ }
+
+ main .row p {
+     color: wheat;
+     font-size: 1.3rem;
+     padding-bottom: 5rem;
+ }
+
+ /* Contact */
+ .contact {
+     padding-top: 3rem;
+     padding-bottom: 3rem;
+ }
+
+ .contact .row {
+     justify-content: center;
+     align-items: center;
+ }
+
+ .contact .row .left h3 {
+     font-size: 1.8rem;
+ }
+
+ .contact .row .left p {
+     font-size: 1.2rem;
+ }
+
+ /* Footer */
+ footer {}
+
+ footer .footer4 {
+     padding: 4rem 7%;
+ }
+
+ footer .footer4 .footer-left1 h3 {
+     font-size: 2rem;
+     color: var(--primary);
+ }
+
+ footer .footer4 .footer-left1 p {
+     font-size: 1.2rem;
+     color: #5E5E5E;
+     margin-bottom: 3rem;
+ }
+
+ footer .footer4 .footer-left1 span {
+     font-size: 1.1rem;
+     color: #5E5E5E;
+     margin-bottom: 3rem;
+ }
+
+ footer .footer4 .footer-left2 h3,
+ footer .footer4 .footer-right1 h3,
+ footer .footer4 .footer-right2 h3 {
+     font-size: 1.2rem;
+     color: var(--primary);
+     margin-bottom: 1rem;
+ }
+
+ footer .footer4 .footer-left2 p,
+ footer .footer4 .footer-right1 p {
+     font-size: 1rem;
+     color: #777;
+     font-family: OpenSans;
+     margin-bottom: 1.5rem;
+     margin-left: 1.5rem;
+ }
+
+ footer .footer4 .footer-right2 p {
+     font-size: 1rem;
+     color: #444;
+     font-family: OpenSans;
+ }
+
+ footer .footer4 .footer-right2 .lingkaran:hover {
+     height: 5rem;
+ }
+
+ footer .container .footer4 .footer-right2 a img {
+     width: 2.5rem;
+ }
+
+
+ footer .copyright {
+     padding: 2.5rem 7%;
+     background-color: var(--primary);
+     display: flex;
+     justify-content: space-between;
+ }
+
+ footer .copyright .copy {
+     font-size: 1rem;
+     font-family: OpenSans;
+     line-height: 1.4;
+     font-weight: 400;
+     color: white;
+ }
+
+ footer .copyright .design {
+     font-size: 1rem;
+     font-family: OpenSans;
+     line-height: 1.4;
+     color: white;
+     font-weight: 400;
+ }
+
+ footer .copyright .design span {
+     color: var(--bg);
+ }
+
+ /* Style createAccount.html */
+ .main-create-product .logo {
+     margin-top: 10rem;
+     width: 5rem;
+ }
+
+ .main-create-product p {
+     font-size: 1.5rem;
+     color: #212529;
+     font-weight: 300;
+ }
+
+ input[type="file"]::file-selector-button {
+     background: #0D6EFD;
+     color: white;
+     cursor: pointer;
+ }
+
+ .form-control[type=file]:not(:disabled):not([readonly]) {
+     cursor: pointer;
+     color: #0D6EFD;
+ }
+
+
+
+
+ /* Media Query */
+ /* Laptop */
+ @media (max-width: 1366px) {
+     html {
+         font-size: 75%;
+     }
+ }
+
+ /* Tablet */
+ @media (max-width: 768px) {
+     html {
+         font-size: 62.5%;
+     }
+
+     main .row {
+         flex-wrap: wrap;
+     }
+
+     footer .footer4 {
+         flex-wrap: wrap;
+     }
+ }
+
+ /* Handphone */
+ @media (max-width: 480px) {
+     html {
+         font-size: 55%;
+     }
+ }
