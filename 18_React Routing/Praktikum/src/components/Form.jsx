@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "../element/Input";
 import Title from "../element/Title";
 import { v4 as uuidv4 } from 'uuid';
+import { Link } from "react-router-dom";
 
 const Form = () => {
 
@@ -162,8 +163,10 @@ const Form = () => {
                     </thead>
                     <tbody>
                         {product && product.map((product) => (
-                            <tr>
-                                <td>{product.id}</td>
+                            <tr >
+                                <td>
+                                    <Link to={`/product/${product.id}`}>{product.id}</Link>
+                                </td>
                                 <td>{product.name}</td>
                                 <td>{product.category}</td>
                                 <td>{product.frehsness}</td>
