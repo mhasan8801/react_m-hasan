@@ -19,7 +19,7 @@ const LandingPage = () => {
                         </a>
                     </div>
                     <div className="main-right">
-                        <img className="img-hero" src={hero} alt="Image Hero" />
+                        <img className="img-hero" src={hero} alt="ImageHero" />
                     </div>
                 </div>
             </main>
