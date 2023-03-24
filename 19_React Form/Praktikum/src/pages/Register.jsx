@@ -1,92 +1,66 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar"
-import { useDispatch, useSelector } from "react-redux";
-import { isEmail } from "validator";
 
 const Register = () => {
 
-    const form = useRef();
-    const checkBtn = useRef();
+    const [form, setForm] = useState({
+        firstName: "",
+        lastName: "",
+        username: "",
+        email: "",
+        password: "",
+        confirmPw: ""
+    })
 
-    const required = (value) => {
-        if (!value) {
-            return (
-                <div className="alert alert-danger">
-                    This field is required!
-                </div>
-            )
+    const [error, setError] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPw: ""
+    })
+
+    const formChange = (event) => {
+        setForm({ ...form, [event.target.name]: event.target.value })
+    }
+
+    const validForm = () => {
+        let validate = true;
+        const errors = {};
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+        if (form.firstName.length < 3) {
+            validate = false;
+            errors.firstName = "First name minimal 3 character!";
         }
-    }
-
-    const validName = (value) => {
-        if (value.length <= 3) {
-            return (
-                <div className="alert alert-danger">
-                    This field minimal 3 character!
-                </div>
-            )
+        if (form.lastName.length < 3) {
+            validate = false;
+            errors.lastName = "Last name minimal 3 character!";
         }
-    }
-
-    const validEmail = (value) => {
-        if (!isEmail(value)) {
-            return (
-                <div className="alert alert-danger">
-                    This is not a valid email!
-                </div>
-            )
+        if (!regexEmail.test(form.email)) {
+            validate = false;
+            errors.email = "Email is invalid!"
         }
-    }
-
-    const validPassword = (value) => {
-        if (value.length <= 8) {
-            return (
-                <div className="aler alert-danger">
-                    This password minimal 8 character!
-                </div>
-            )
+        if (form.password.length < 8) {
+            validate = false;
+            errors.password = "Password minimal 8 character!";
         }
-    }
-
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [userName, setUserName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPw, setConfirmPw] = useState("");
-    const [success, setSuccess] = useState(false);
-
-    const dispatch = useDispatch();
-
-    const valueFirstName = (e) => {
-        const firstName = e.target.value;
-        setFirstName(firstName)
-    }
-    const valueLasttName = (e) => {
-        const lastName = e.target.value;
-        setLastName(lastName)
-    }
-    const valueEmail = (e) => {
-        const email = e.target.value;
-        setEmail(email)
-    }
-    const valuePassword = (e) => {
-        const password = e.target.value;
-        setPassword(password)
-    }
-
-    const btnRegister = (e) => {
-        e.preventDefault();
-
-        setSuccess(false);
-
-        form.current.validateAll();
-
-        if (checkBtn.current.context._errors.length === 0) {
-            dispatch(regi)
+        if (form.password !== form.confirmPw) {
+            validate = false;
+            errors.confirmPw = "Password and confirm password do not match!"
         }
 
+        setError(errors);
+        return validate;
+    }
+
+    const btnRegister = (event) => {
+        event.preventDefault();
+
+        if (validForm()) {
+            console.log(form)
+        }
     }
 
     return (
@@ -95,42 +69,48 @@ const Register = () => {
 
             <div className="container my-5 pt-4">
                 <h3 className="mt-5">Register</h3>
-                <form className="row g-3">
+                <form className="row g-3" onSubmit={btnRegister}>
                     <div className="col-md-6">
                         <label htmlFor="firstName" className="firstName form-label">
                             First Name
                         </label>
-                        <input type="text" className="firstName form-control" id="firstName" />
+                        <input type="text" className="firstName form-control" id="firstName" name="firstName" value={form.firstName} onChange={formChange} required />
+                        {error.firstName && <span style={{ color: "red" }}>{error.firstName}</span>}
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="lastName" className="lastName form-label">
                             Last Name
                         </label>
-                        <input type="text" className="lastName form-control" id="lastName" />
+                        <input type="text" className="lastName form-control" id="lastName" name="lastName" value={form.lastName} onChange={formChange} required />
+                        {error.lastName && <span style={{ color: "red" }}>{error.lastName}</span>}
                     </div>
                     <div className="col-md-6">
-                        <label htmlFor="userName" className="userName form-label">
+                        <label htmlFor="username" className="username form-label">
                             Username
                         </label>
-                        <input type="text" className="userName form-control" id="userName" />
+                        <input type="text" className="username form-control" id="username" name="username" value={form.username} onChange={formChange} required />
+                        {error.username && <span style={{ color: "red" }}>{error.username}</span>}
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="email" className="email form-label">
                             Email
                         </label>
-                        <input type="email" className="email form-control" id="email" />
+                        <input type="text" className="email form-control" id="email" name="email" value={form.email} onChange={formChange} required />
+                        {error.email && <span style={{ color: "red" }}>{error.email}</span>}
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="password" className="password form-label">
                             Password
                         </label>
-                        <input type="password" className="password form-control" id="password" />
+                        <input type="password" className="password form-control" id="password" name="password" value={form.password} onChange={formChange} required />
+                        {error.password && <span style={{ color: "red" }}>{error.password}</span>}
                     </div>
                     <div className="col-md-6">
-                        <label htmlFor="confirmPassword" className="confirmPassword form-label">
+                        <label htmlFor="confirmPw" className="confirmPw form-label">
                             Confirm Password
                         </label>
-                        <input type="password" className="confirmPassword form-control" id="confirmPassword" />
+                        <input type="password" className="confirmPw form-control" id="confirmPw" name="confirmPw" value={form.confirmPw} onChange={formChange} required />
+                        {error.confirmPw && <span style={{ color: "red" }}>{error.confirmPw}</span>}
                     </div>
                     <p>Sudah punya akun? <Link to="/login">Login</Link></p>
                     <div className="col-12">
