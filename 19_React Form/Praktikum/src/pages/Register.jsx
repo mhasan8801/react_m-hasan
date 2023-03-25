@@ -74,42 +74,42 @@ const Register = () => {
                         <label htmlFor="firstName" className="firstName form-label">
                             First Name
                         </label>
-                        <input type="text" className="firstName form-control" id="firstName" name="firstName" value={form.firstName} onChange={formChange} required />
+                        <input type="text" className="firstName form-control" id="firstName" name="firstName" value={form.firstName} onChange={formChange}  />
                         {error.firstName && <span style={{ color: "red" }}>{error.firstName}</span>}
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="lastName" className="lastName form-label">
                             Last Name
                         </label>
-                        <input type="text" className="lastName form-control" id="lastName" name="lastName" value={form.lastName} onChange={formChange} required />
+                        <input type="text" className="lastName form-control" id="lastName" name="lastName" value={form.lastName} onChange={formChange}  />
                         {error.lastName && <span style={{ color: "red" }}>{error.lastName}</span>}
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="username" className="username form-label">
                             Username
                         </label>
-                        <input type="text" className="username form-control" id="username" name="username" value={form.username} onChange={formChange} required />
+                        <input type="text" className="username form-control" id="username" name="username" value={form.username} onChange={formChange}  />
                         {error.username && <span style={{ color: "red" }}>{error.username}</span>}
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="email" className="email form-label">
                             Email
                         </label>
-                        <input type="text" className="email form-control" id="email" name="email" value={form.email} onChange={formChange} required />
+                        <input type="text" className="email form-control" id="email" name="email" value={form.email} onChange={formChange}  />
                         {error.email && <span style={{ color: "red" }}>{error.email}</span>}
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="password" className="password form-label">
                             Password
                         </label>
-                        <input type="password" className="password form-control" id="password" name="password" value={form.password} onChange={formChange} required />
+                        <input type="password" className="password form-control" id="password" name="password" value={form.password} onChange={formChange}  />
                         {error.password && <span style={{ color: "red" }}>{error.password}</span>}
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="confirmPw" className="confirmPw form-label">
                             Confirm Password
                         </label>
-                        <input type="password" className="confirmPw form-control" id="confirmPw" name="confirmPw" value={form.confirmPw} onChange={formChange} required />
+                        <input type="password" className="confirmPw form-control" id="confirmPw" name="confirmPw" value={form.confirmPw} onChange={formChange}  />
                         {error.confirmPw && <span style={{ color: "red" }}>{error.confirmPw}</span>}
                     </div>
                     <p>Sudah punya akun? <Link to="/login">Login</Link></p>
