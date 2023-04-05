@@ -1,0 +1,7 @@
+# Summary Section 28 GraphQL - Subscription
+
+1. Subscription merupakan sebuah fitur pada GraphQL yang memungkinkan aplikasi untuk mendapatkan data yang diperbarui secara real-time dari server. Ketika ada perubahan pada data yang di-subscribe, server akan secara otomatis mengirimkan perubahan tersebut ke aplikasi.
+
+2. Untuk menggunakan Subscription pada GraphQL, pertama-tama kita perlu menuliskan query Subscription di dalam file GraphQL. Kemudian, kita dapat menggunakan hook useSubscription atau method subscribeToMore untuk mengirimkan request ke server dan menerima respon berupa perubahan data secara real-time.
+
+3. Penggunaan useSubscription adalah cara paling sederhana dan mudah untuk mengimplementasikan Subscription di dalam aplikasi. Dengan useSubscription, kita hanya perlu menuliskan query Subscription dan hook tersebut akan secara otomatis mengirimkan dan menerima data dari server. Sedangkan jika menggunakan subscribeToMore lebih fleksibel karena kita dapat menambahkan logic tambahan pada callback function yang akan dipanggil ketika ada perubahan data yang diterima. Dalam subscribeToMore, kita juga dapat menambahkan query dan variabel tambahan untuk memperbarui data yang telah di-subscribe.
