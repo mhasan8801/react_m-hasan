@@ -1,6 +1,6 @@
 # Summary Section 29 Deployment
 
-Link Praktikum Deployment : https://deployment-react-ten.vercel.app/created-product
+Link Praktikum Deployment : https://deployment-react-ten.vercel.app
 
 1. Dalam proses pengembangan website terdapat proses **Deployment** yang merupakan proses menjadikan website menjadi versi production sehingga menjadi lebih cepat dan ringan, jika membangun React JS dengan _create-react-app_ dapat menggunakan perintah _npm run build_ untuk melakukan proses production website.
 
