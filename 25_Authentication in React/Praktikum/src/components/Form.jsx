@@ -1,11 +1,11 @@
-
-import { useReducer, useState } from "react";
+import { useEffect, useState } from "react";
 import Input from "../element/Input";
 import Title from "../element/Title";
 import { v4 as uuidv4 } from 'uuid';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteProductRed, setProduct } from "../features/product/productSlice";
+import { deleteProductRed, fetchProductList, setProduct, postProductList } from "../features/product/productSlice";
+import axios from "axios";
 
 const Form = () => {
 
@@ -18,11 +18,11 @@ const Form = () => {
     // const [product, setProduct] = useState([]);
     const product = useSelector(state => state.product.products)
     const dispatch = useDispatch()
-
-
+    console.log(product)
     useEffect(() => {
         dispatch(fetchProductList());
     }, [])
+    
 
     const regexName = /^[a-zA-Z0-9 ]{1,10}$/;
     const regexCategory = /^(Formal|Non Formal|Casual)$/
@@ -94,12 +94,19 @@ const Form = () => {
         setDesc('');
         setPrice('');
 
-        dispatch(setProduct(addProduct))
+        dispatch(postProductList({
+            id : addProduct.id,
+            productName : addProduct.productName,
+            productCategory : addProduct.productCategory,
+            productFreshness : addProduct.productFreshness,
+            additionalDescription : addProduct.additionalDescription,
+            productPrice : addProduct.productPrice
+            }))
 
 
     }
 
-    const btnDelete = (productId) => {
+    const btnDelete = async (productId) => {
         const deleteProduct = product.find((product) => product.id === productId);
         const confirmDelete = window.confirm(`Apakah Anda yakin ingin menghapus produk "${deleteProduct.productName}"?`);
 
@@ -107,6 +114,9 @@ const Form = () => {
             // const filteredProducts = product.filter((product) => product.id !== productId);
             // setProduct(filteredProducts);
             dispatch(deleteProductRed(productId))
+            await axios.delete("https://642e1dab2b883abc640747d3.mockapi.io/products" + `/${productId}`)
+            dispatch(fetchProductList());
+
         }
     };
 
@@ -136,7 +146,7 @@ const Form = () => {
                             value={category}
                             onChange={valueCategory}
                         >
-
+                            <option selected hidden></option>
                             <option value="Formal" defaultValue>Formal</option>
                             <option value="Non Formal">Non Formal</option>
                             <option value="Casual">Casual</option>
