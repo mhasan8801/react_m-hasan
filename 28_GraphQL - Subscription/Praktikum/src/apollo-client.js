@@ -12,7 +12,7 @@ const httpLink = new HttpLink({
 })
 
 const wsLink = new WebSocketLink({
-    uri: 'https://hardy-perch-29.hasura.app/v1/graphql',
+    uri: 'wss://hardy-perch-29.hasura.app/v1/graphql',
     options: {
         reconnect: true,
         connectionParams: {
