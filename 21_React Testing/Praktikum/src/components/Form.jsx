@@ -85,7 +85,7 @@ const Form = () => {
         // setProduct([...product, addProduct])
         setName('');
         setCategory('');
-        setImage(null);
+        setImage('');
         setFrehsness('');
         setDesc('');
         setPrice('');
@@ -115,7 +115,7 @@ const Form = () => {
                     <Input
                         text="Product Name"
                         type="text"
-                        classInput="Name"
+                        className="Name"
                         id="Name"
                         value={name}
                         name="productName"
@@ -133,7 +133,7 @@ const Form = () => {
                             aria-label="Default select example"
                             value={category}
                             onChange={valueCategory}
-                            datatestid="productCategory"
+                            data-testid="productCategory"
                         >
                             <option selected hidden></option>
                             <option value="Formal">Formal</option>
@@ -183,7 +183,7 @@ const Form = () => {
                     <Input
                         text="Product Price"
                         type="text"
-                        classInput="price"
+                        className="price"
                         id="price"
                         onChange={valuePrice}
                         placeholder="$"

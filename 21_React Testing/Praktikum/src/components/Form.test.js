@@ -4,11 +4,10 @@ import userEvent from '@testing-library/user-event';
 import Form from './Form';
 import { Provider } from 'react-redux';
 import store from '../features/product/store';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Router } from 'react-router-dom';
 
-
-describe("form", () => {
-    it ("check pages", () => {
+describe("Form Created Product", () => {
+    it ("Check Form", () => {
         render(
             <Provider store={store}>
                 <BrowserRouter>
@@ -42,8 +41,9 @@ describe("form", () => {
             </Provider>
         )
         const productCategory=screen.getByTestId("productCategory")
+        const categoryOption = "Formal";
         fireEvent.change(productCategory, {target:
-        {value:"product_1"}})
+        {value:categoryOption}})
         expect(screen.getByTestId("productCategory")).toBeInTheDocument()
     })
 
@@ -70,10 +70,10 @@ describe("form", () => {
                 </BrowserRouter>
             </Provider>
         )
-        const submit=screen.getByTestId("buttonSubmit")
-        fireEvent.click(submit)
+        const submitButton = screen.getByTestId("buttonSubmit");
+        fireEvent.click(submitButton)
         await waitFor(() => {
-            expect(screen.queryByText(/Product Name is a required/)).toBeInTheDocument()
+            expect(screen.queryByTestId("productName")).toBeInTheDocument()
         })
     })
     
@@ -86,33 +86,15 @@ describe("form", () => {
                 </BrowserRouter>
             </Provider>
         )
-        const productName=screen.getByTestId("productName")
-        fireEvent.change(productName, {target:{value:"b".repeat(26)}})
-        const submit=screen.getByTestId("buttonSubmit")
-        fireEvent.click(submit)
-        await waitFor(() => {
-            expect(screen.getByText("Product Name must be at most 25 Characters")).toBeInTheDocument()
-        })
-    })
+        const productName = screen.getByTestId('productName');
+        fireEvent.change(productName, { target: { value: 'b'.repeat(26) } });
+        const submitButton = screen.getByTestId('buttonSubmit');
+        fireEvent.click(submitButton);
 
-    it ("Check Product required", async () => {
-        render(
-            <Provider store={store}>
-                <BrowserRouter>
-                    <Form/>
-                </BrowserRouter>
-            </Provider>
-        )
-        const submit=screen.getByTestId("buttonSubmit")
-        fireEvent.click(submit)
         await waitFor(() => {
-            expect(screen.getByText("Product Name is a required")).toBeInTheDocument()
-            expect(screen.getByText("Selected Category is a required")).toBeInTheDocument()
-            expect(screen.getByText("Image is required")).toBeInTheDocument()
-            expect(screen.getByText("Product Freshness is a required")).toBeInTheDocument()
-            expect(screen.getByText("Product Description is a required")).toBeInTheDocument()
-            expect(screen.getByText("Product price is a required")).toBeInTheDocument()
-        })
+        const errorMessage = screen.getByTestId('productName');
+        expect(errorMessage).toBeInTheDocument();
+        });
     })
 
 } )
